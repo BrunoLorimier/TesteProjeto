@@ -10,12 +10,18 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+              <button mat-menu-item [routerLink]="['/evento']">Expandir</button>
+              <button mat-menu-item>Remover</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Doação de sangue'">
+          <div>Venha doar sangue para ajudar.</div>
+        </mat-card-content>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Arrecadação de alimentos'">
+          <div>Com a pandemia muitas famílias estão passando fome, venha doar alimentos para ajudá-los.</div>
+        </mat-card-content>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Sem evento'">
           <div>Eventos</div>
         </mat-card-content>
       </mat-card>

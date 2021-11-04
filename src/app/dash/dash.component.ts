@@ -13,18 +13,18 @@ export class DashComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Doação de sangue', cols: 1, rows: 1 },
+          { title: 'Arrecadação de alimentos', cols: 1, rows: 1 },
+          { title: 'Sem evento', cols: 1, rows: 1 },
+          { title: 'Sem evento', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Doação de sangue', cols: 2, rows: 1 },
+        { title: 'Arrecadação de alimentos', cols: 1, rows: 1 },
+        { title: 'Sem evento', cols: 1, rows: 2 },
+        { title: 'Sem evento', cols: 1, rows: 1 }
       ];
     })
   );

@@ -18,6 +18,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './menu/menu-usuario/menu.component';
 import { AdmMenuComponent } from './menu/menu-adm/menu-adm.component';
 import { ModeradorMenuComponent } from './menu/menu-moderador/menu-moderador.component';
+import { PresencaComponent } from './presenca/presenca.component';
+import { TermosComponent } from './termos/termos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ModeradorMenuComponent } from './menu/menu-moderador/menu-moderador.com
     MenuComponent,
     DashComponent,
     AdmMenuComponent,
-    ModeradorMenuComponent
+    ModeradorMenuComponent,
+    PresencaComponent,
+    TermosComponent
   ],
   imports: [
     BrowserModule,

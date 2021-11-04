@@ -1,0 +1,29 @@
+.titulo {
+  text-align: center;
+  margin: 1rem;
+  margin-top: 2rem;
+  padding: 4rem;
+  font-size: xx-large;
+  border: solid 2px black;
+}
+
+.descricao {
+  margin: 1rem;
+  margin-top: 4rem;
+}
+
+.confirmado {
+  text-align: center;
+  margin: 4rem 20% 2rem 20%;
+  font-size: x-large;
+  background-color: rgb(100, 100, 255);
+}
+
+.botao {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
