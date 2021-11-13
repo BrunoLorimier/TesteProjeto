@@ -20,9 +20,10 @@
           *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <span>Ola, Administrador</span>
+        <span>Olá, Administrador</span>
       </mat-toolbar>
-      <ng-content></ng-content>>
+      <ng-content></ng-content>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
   
