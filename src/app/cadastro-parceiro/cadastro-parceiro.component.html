@@ -1,0 +1,55 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+
+<nav class="navbar navbar-light bg-primary">
+    <a class="navbar-brand" href="/">
+        <img src="/src/public/img/logo.png">
+    </a>
+</nav>
+<hr>
+<div class="container padding">
+    <div class="card" id="formulario-pergunta">
+        <div class="card-header">
+            <h3>Cadastro de Parceiros</h3>
+        </div>
+        <div class="card-body">
+            <form action="/salvarentidade" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Nome</label>
+                        <input type="text" name="nome" id="inputName" class="form-control"  required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" name="email" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword4">Senha</label>
+                        <input type="password" class="form-control" id="inputPassword4" name="senha" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputAddress">Endereço</label>
+                        <input type="text" class="form-control" id="inputAddress" name="endereco" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputAddress">Telefone</label>
+                        <input type="text" class="form-control" id="inputAddress" name="telefone" required>
+                    </div>
+                    <select class="form-control col-md-12 formato cima" name="Zona" >
+                        <label for="inputAddress">Zona</label>
+                        <option>Zona Sul</option>
+                        <option>Zona Leste</option>
+                        <option>Zona Norte</option>
+                        <option>Zona Oeste</option>
+                    </select>
+                    <select class="form-control col-md-12 formato"  name="tipo"   >
+                        <label for="inputAddress">Tipo</label>
+                        <option>Paróquia</option>
+                        <option>ONG</option>
+                        <option>CUFA</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>              
+    </div>                
+</div>

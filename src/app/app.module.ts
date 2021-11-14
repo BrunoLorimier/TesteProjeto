@@ -20,6 +20,9 @@ import { AdmMenuComponent } from './menu/menu-adm/menu-adm.component';
 import { ModeradorMenuComponent } from './menu/menu-moderador/menu-moderador.component';
 import { PresencaComponent } from './presenca/presenca.component';
 import { TermosComponent } from './termos/termos.component';
+import { CadastroEventoComponent } from './cadastro-evento/cadastro-evento.component';
+import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
+import { CadastroAcoesComponent } from './cadastro-acoes/cadastro-acoes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { TermosComponent } from './termos/termos.component';
     AdmMenuComponent,
     ModeradorMenuComponent,
     PresencaComponent,
-    TermosComponent
+    TermosComponent,
+    CadastroEventoComponent,
+    CadastroParceiroComponent,
+    CadastroAcoesComponent
   ],
   imports: [
     BrowserModule,
