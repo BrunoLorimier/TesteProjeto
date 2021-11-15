@@ -1,0 +1,65 @@
+<nav class="navbar navbar-light bg-primary">
+    <a class="navbar-brand" href="/">
+        <img src="/src/public/img/logo.png">
+    </a>
+</nav>
+<hr>
+<div class="container padding">
+    <div class="card">
+    <div class="card-header"><h3>Novo Usuário</h3> </div>
+    <div class="card-body">
+    <form action="#">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">CPF</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque seu cpf" required class="form-control" matInput>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Nome</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque seu nome" required class="form-control" matInput>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Email</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque seu email" required class="form-control">
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Senha</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque sua senha" required class="form-control" matInput>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Endereço</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque seu endereço" required class="form-control">
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Telefone</span>
+                <div class="espaco">
+                <input type="text" placeholder="Coloque seu numero de telefone Ex... (11)22224444" required class="form-control">
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Data de Nascimento</span>
+                <div class="espaco">
+                <input type="text" placeholder="Informe sua data de nascimento" required class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="espaco">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+        <div class="espaco">
+            Já é um usuário? <a [routerLink]="['/']">Faça login!</a>
+        </div>
+    </form>
+    </div>
+    </div>
+</div>

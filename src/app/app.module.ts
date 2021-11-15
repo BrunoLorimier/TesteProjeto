@@ -23,6 +23,8 @@ import { TermosComponent } from './termos/termos.component';
 import { CadastroEventoComponent } from './cadastro-evento/cadastro-evento.component';
 import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 import { CadastroAcoesComponent } from './cadastro-acoes/cadastro-acoes.component';
+import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CadastroAcoesComponent } from './cadastro-acoes/cadastro-acoes.componen
     TermosComponent,
     CadastroEventoComponent,
     CadastroParceiroComponent,
-    CadastroAcoesComponent
+    CadastroAcoesComponent,
+    NovoUsuarioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
