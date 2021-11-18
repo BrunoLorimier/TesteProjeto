@@ -8,11 +8,17 @@ import { ModeradorMenuComponent } from './menu/menu-moderador/menu-moderador.com
 import { AdmMenuComponent } from './menu/menu-adm/menu-adm.component';
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 import { LoginComponent } from './login/login.component';
+import { CadastroAcoesComponent } from './cadastro-acoes/cadastro-acoes.component';
+import { CadastroEventoComponent } from './cadastro-evento/cadastro-evento.component';
+import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 
 const routes: Routes = [
   // {path:'', component: DashComponent},
   {path: '', component: LoginComponent},
   {path: 'signup', component: NovoUsuarioComponent},
+  {path: 'novoevento', component: CadastroEventoComponent},
+  {path: 'novoacoes', component: CadastroAcoesComponent},
+  {path: 'novoparceiro', component: CadastroParceiroComponent},
   {path:'evento', component: PresencaComponent},
   {path: 'termos', component: TermosComponent},
   {path: 'menu', component: MenuComponent, children: [

@@ -1,10 +1,30 @@
 <mat-toolbar color="primary">
     <span><a routerLink="/menu">Voltar</a></span>
 </mat-toolbar>
-<mat-card class="titulo">Doação de sangue</mat-card>
-<div class="descricao">A doação de sangue é um gesto solidário de doar uma pequena quantidade do próprio sangue para salvar a vida de pessoas que se submetem a tratamentos e intervenções médicas de grande porte e complexidade, como transfusões, transplantes, procedimentos oncológicos e cirurgias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat ea quo ducimus perspiciatis veritatis non nemo distinctio quisquam fugiat. Aliquam quas magnam similique illum. Omnis laudantium inventore ipsum sed asperiores expedita perferendis? Quae sunt id corporis assumenda quaerat reiciendis autem eaque ea voluptas, modi quasi voluptatem, a culpa delectus? Iste, tempore! Amet, tempore reiciendis. Rem sequi eum qui dolorem autem sed minus dolor deserunt dicta. Deserunt assumenda quod rerum eveniet et officiis odit porro perspiciatis? Doloremque ea consectetur aperiam ratione? Est, quam deserunt quasi nam optio tenetur, labore ea eligendi recusandae necessitatibus libero odit possimus voluptatem inventore omnis, quaerat qui?</div>
+<mat-card class="titulo">
+    Doação de sangue
+    <!-- {{evento.nome}} -->
+    <!-- <input matInput type="text" name="nome" [ngModel] = "evento?.nome"> -->
+</mat-card>
+<div class="descricao">
+    A doação de sangue é um gesto solidário de doar uma pequena quantidade do próprio sangue para salvar a vida de pessoas que se submetem a tratamentos e intervenções médicas de grande porte e complexidade, como transfusões, transplantes, procedimentos oncológicos e cirurgias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem doloribus sed facere consequatur quidem laborum.
+    <!-- <p>Data Incial: {{evento.dt_inicio}}</p>
+    <p>Data Final: {{evento.dt_final}}</p>
+    <p>Descrição: {{evento.desc}}</p>
+    <p>Zona: {{evento.zona}}</p>
+    <p>Tipo: {{evento.tipo}}</p>
+    <p>Tipo de Entidade: {{evento.tipoEntidade}}</p> -->
+    <!-- <div><input matInput type="text" name="dt_inicio" [ngModel] = "evento?.dt_inicio"></div>
+    <div><input matInput type="text" name="dt_final" [ngModel] = "evento?.dt_final"></div>
+    <div><input matInput type="text" name="desc" [ngModel] = "evento?.desc"></div>
+    <div><input matInput type="text" name="zona" [ngModel] = "evento?.zona"></div>
+    <div><input matInput type="text" name="tipo" [ngModel] = "evento?.tipo"></div>
+    <div><input matInput type="text" name="tipoEntidade" [ngModel] = "evento?.tipoEntidade"></div> -->
+</div>
 <mat-card class="confirmado">Confirmados: 21 / 60</mat-card>
 <div class="botao">
     <button mat-raised-button color="primary" class="btn-lg" [routerLink]="['/termos']">Confirmar presença</button>
     <!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
+    <button mat-raised-button class="btn-lg btn-danger left">Remover inscrição</button>
+    <!-- (click)="removerIns(evento.id)" -->
 </div>

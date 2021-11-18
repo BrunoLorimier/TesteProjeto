@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" href="/">
-        <img src="/src/public/img/logo.png">
+    <a class="navbar-brand" routerLink="/mod">
+        <img src="logo.png">
     </a>
 </nav>
 <hr>
@@ -19,7 +19,7 @@
             <div class="input-box">
                 <span class="details">Email</span>
                 <div class="espaco">
-                <input type="text" placeholder="Coloque seu email" required class="form-control">
+                <input type="email" placeholder="Coloque seu email" required class="form-control">
                 </div>
             </div>
             <div class="input-box">
@@ -43,13 +43,13 @@
             <div class="input-box">
                 <span class="details">Data do Evento</span>
                 <div class="espaco">
-                <input type="text" placeholder="Informe a cada do evento" required class="form-control">
+                <input type="date" placeholder="Informe a cada do evento" required class="form-control">
                 </div>
             </div>
             <div class="input-box">
                 <span class="details">Número de pessoas</span>
                 <div class="espaco">
-                <input type="text" placeholder="Informe o número máximo de pessoas" required class="form-control">
+                <input type="number" min="0" placeholder="Informe o número máximo de pessoas" required class="form-control">
                 </div>
             </div>
             <div class="input-box">

@@ -12,4 +12,8 @@ export class TermosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onConfirmar(){
+    
+  }
+
 }

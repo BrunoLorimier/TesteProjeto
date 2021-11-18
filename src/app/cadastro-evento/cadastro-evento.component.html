@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" href="/">
-        <img src="/src/public/img/logo.png">
+    <a class="navbar-brand" routerLink="/mod">
+        <img src="logo.png">
     </a>
 </nav>
 <hr>
@@ -15,22 +15,22 @@
         <form class="row g-3">
           <div class="col-12">
             <label for="inputName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inputName">
+            <input type="text" class="form-control" id="inputName" required>
           </div>
 
           <div class="col-md-6">
             <label for="inputAddress" class="form-label">Data Inicial</label>
-            <input type="text" class="form-control" id="inputAddress">
+            <input type="date" class="form-control" id="inputAddress" required>
           </div>
 
           <div class="col-md-6">
             <label for="inputAddress" class="form-label">Data Final</label>
-            <input type="text" class="form-control" id="inputAddress">
+            <input type="date" class="form-control" id="inputAddress" required>
           </div>
 
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
           </div>
 
           <!--<div class="input-group date">

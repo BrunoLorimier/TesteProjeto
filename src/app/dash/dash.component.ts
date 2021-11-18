@@ -29,5 +29,9 @@ export class DashComponent {
     })
   );
 
+  // onDelete(id: string) {
+  //   this.eventoService.removerEvento(id)
+  // }
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 }

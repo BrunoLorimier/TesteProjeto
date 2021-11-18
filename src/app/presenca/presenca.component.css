@@ -28,3 +28,7 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.left {
+  margin-left: 2%;
+}

@@ -296,7 +296,7 @@ input[type="text"]:placeholder {
 
 #icon {
   width: 60%;
-  /* background-image: url("logo.png"); */
+  background-image: url("logo.png");
 }
 
 /* .padding {
