@@ -12,8 +12,8 @@ import { EventoService } from '../evento/evento.service';
 export class PresencaComponent implements OnInit {
 
   private busca: string = "busca"
-  private idEvento!: string;
-  public evento!: Evento;
+  private idEvento: string;
+  public evento: Evento;
 
 
   constructor(public eventoService: EventoService,
@@ -23,7 +23,7 @@ export class PresencaComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has("idEvento")){
         this.busca = "buscar"
-        paramMap.get("idEvento")
+        this.idEvento = paramMap.get("idEvento")
         this.eventoService.getEvento(this.idEvento).subscribe(dadosEvento => {
           this.evento = {
             id: dadosEvento.id,
