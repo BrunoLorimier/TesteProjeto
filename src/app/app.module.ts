@@ -58,7 +58,8 @@ import { LoginComponent } from './login/login.component';
     MatCardModule,
     MatMenuModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,50 +8,43 @@
     <div class="card" id="formulario-pergunta">
     <div class="card-header"><h3>Novo Usuário</h3> </div>
     <div class="card-body">
-    <form action="#">
+    <form (submit)="onSignup(novousuarioForm)" #novousuarioForm="ngForm">
         <div class="user-details">
-            <div class="input-box">
-                <span class="details">CPF</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu cpf" required class="form-control" matInput>
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Nome</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu nome" required class="form-control" matInput>
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Email</span>
-                <div class="espaco">
-                <input type="email" placeholder="Coloque seu email" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Senha</span>
-                <div class="espaco">
-                <input type="password" placeholder="Coloque sua senha" required class="form-control" matInput>
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Endereço</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu endereço" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Telefone</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu numero de telefone Ex... (11)22224444" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Data de Nascimento</span>
-                <div class="espaco">
-                <input type="date" placeholder="Informe sua data de nascimento" required class="form-control">
-                </div>
-            </div>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu CPF</mat-label>
+                <input name="cpf" ngModel #cpfInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="cpfInput.invalid">CPF inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu nome</mat-label>
+                <input name="nome" ngModel #nomeInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="nomeInput.invalid">Nome inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu email</mat-label>
+                <input name="email" ngModel #emailInput="ngModel" type="email" required email class="form-control" matInput>
+                <mat-error *ngIf="emailInput.invalid">Digite um e-mail válido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque sua senha</mat-label>
+                <input name="senha" ngModel #senhaInput="ngModel" type="password" required class="form-control" matInput>
+                <mat-error *ngIf="senhaInput.invalid">Senha inválida</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu endereço</mat-label>
+                <input name="end" ngModel #endInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="endInput.invalid">Endereço inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu numero de telefone Ex... (11)22224444</mat-label>
+                <input name="tel" ngModel #telInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="telInput.invalid">Telefone inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Informe sua data de nascimento</mat-label>
+                <input name="data" ngModel #dataInput="ngModel" type="date" required class="form-control" matInput>
+                <mat-error *ngIf="dataInput.invalid">Data inválida</mat-error>
+            </mat-form-field>
         </div>
         <div class="espaco">
             <button type="submit" class="btn btn-primary">Cadastrar</button>

@@ -32,10 +32,24 @@
         </div>
 
         <!-- Login Form -->
-        <form action="Login.do" method="post">
-          <input type="text" id="login" class="fadeIn second" name="email" placeholder="Usuário" />
-          <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Senha" />
-          <input type="submit" class="fadeIn fourth" value="Log In" routerLink="menu"/>
+        <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+          <div>
+          <mat-form-field>
+          <input name="email" ngModel #emailInput="ngModel" matInput type="email" id="login" placeholder="Usuário" required email>
+          <mat-error *ngIf="emailInput.invalid">Email inválido</mat-error>
+          </mat-form-field>
+          </div>
+          <div>
+          <mat-form-field>
+          <input name="senha" ngModel #senhaInput="ngModel" matInput type="text" id="password" placeholder="Senha" required>
+          <mat-error *ngIf="senhaInput.invalid">Senha inválida</mat-error>
+          </mat-form-field>
+          </div>
+          <div>
+          <button mat-raised-button color="primary" type="submit" routerLink="{{router}}">Login</button>
+          </div>
+          <!-- *ngIf="emailInput.valid && senhaInput.valid" -->
+          <!-- <input type="submit" class="fadeIn fourth" value="Log In" routerLink="menu"/> -->
         </form>
 
         <!-- Remind Passowrd -->

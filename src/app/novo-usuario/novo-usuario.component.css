@@ -14,3 +14,8 @@ img {
 nav {
   padding-bottom: 0rem;
 }
+
+mat-form-field,
+input {
+  width: 100%;
+}

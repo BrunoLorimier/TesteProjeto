@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { UsuarioService } from '../usuario/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  router: string
 
-  constructor() { }
+  onLogin(form: NgForm){
+    if (form.invalid) return
+    this.router = "menu"
+    this.usuarioService.login(form.value.email, form.value.senha)
+  }
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
