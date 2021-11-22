@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { EventoService } from '../evento/evento.service';
 
 @Component({
   selector: 'app-cadastro-evento',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroEventoComponent implements OnInit {
 
-  constructor() { }
+  onCadastro (form: NgForm){
+    if (form.invalid) return
+    this.eventoService.criarEvento(form.value.nome, form.value.datai, form.value.dataf, form.value.desc)
+  }
+
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit(): void {
   }

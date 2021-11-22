@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Usuario } from "./usuario.model";
+import { Router } from "@angular/router";
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,8 @@ import { Usuario } from "./usuario.model";
 export class UsuarioService{
 
     constructor(
-        private httpClient: HttpClient
+        private httpClient: HttpClient,
+        private router: Router
     ){}
 
     criarUsuario (cpf: string, nome: string, email: string, senha: string, endereco: string, telefone: string, data: string){
@@ -23,6 +25,7 @@ export class UsuarioService{
         }
         this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
             console.log(resposta)
+            // this.router.navigate(['/'])
         })
     }
 
@@ -33,6 +36,7 @@ export class UsuarioService{
         }
         this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
             console.log(resposta)
+            // this.router.navigate(['/menu'])
         })
     }
 

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" routerLink="/mod">
+    <a class="navbar-brand" routerLink="/menu">
         <img src="logo.png">
     </a>
 </nav>
@@ -11,27 +11,27 @@
         <h3> Cadastro de Ação Social </h3>
       </div>
       <div class="card-body">
-
-        <form class="row g-3">
-          <div class="col-12">
-            <label for="inputName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inputName" required>
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputAddress" class="form-label">Data Inicial</label>
-            <input type="date" class="form-control" id="inputAddress" required>
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputAddress" class="form-label">Data Final</label>
-            <input type="date" class="form-control" id="inputAddress" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-          </div>
+        <form (submit)="onCadastro(eventoForm)" #eventoForm="ngForm" class="row g-3">
+          <mat-form-field class="col-12">
+            <mat-label>Nome</mat-label>
+            <input name="nome" ngModel #nomeInput="ngModel" type="text" class="form-control" id="inputName" required matInput>
+            <mat-error *ngIf="nomeInput.invalid">Nome inválido</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-md-6">
+            <mat-label>Data Inicial</mat-label>
+            <input name="datai" ngModel #dataiInput="ngModel" type="date" class="form-control" id="inputAddress" required matInput>
+            <mat-error *ngIf="dataiInput.invalid">Data inválida</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-md-6">
+            <mat-label>Data Final</mat-label>
+            <input name="dataf" ngModel #datafInput="ngModel" type="date" class="form-control" id="inputAddress" required matInput>
+            <mat-error *ngIf="datafInput.invalid">Data inválida</mat-error>
+          </mat-form-field>
+          <mat-form-field class="mb-3">
+            <mat-label>Descrição</mat-label>
+            <input name="desc" ngModel #descInput="ngModel" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" required matInput>
+            <mat-error *ngIf="descInput.invalid">Descrição inválida</mat-error>
+          </mat-form-field>
 
           <!--<div class="input-group date">
             <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>

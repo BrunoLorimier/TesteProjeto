@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'novoevento', component: CadastroEventoComponent},
   {path: 'novoacoes', component: CadastroAcoesComponent},
   {path: 'novoparceiro', component: CadastroParceiroComponent},
-  {path:'evento', component: PresencaComponent},
+  {path:'evento/:idEvento', component: PresencaComponent},
   {path: 'termos', component: TermosComponent},
   {path: 'menu', component: MenuComponent, children: [
     {path: '', component: DashComponent}, 

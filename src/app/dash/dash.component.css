@@ -1,15 +1,16 @@
-/* .content {
+.content {
   padding: 16px;
 }
 
 .content > mat-card {
-  width: 200px;
+  width: 250px;
 }
 
 div {
   display: inline-block;
-} */
-.grid-container {
+}
+
+/* .grid-container {
   margin: 20px;
 }
 
@@ -35,4 +36,4 @@ div {
 a {
   text-decoration: none;
   color: black;
-}
+} */

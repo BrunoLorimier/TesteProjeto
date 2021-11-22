@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" routerLink="/mod">
+    <a class="navbar-brand" routerLink="/menu">
         <img src="logo.png">
     </a>
 </nav>
@@ -8,56 +8,48 @@
     <div class="card">
     <div class="card-header"><h3>Cadastro de Ações Sociais</h3> </div>
     <div class="card-body">
-    <form action="#">
+    <form (submit)="cadastrar(eventoForm)" #eventoForm="ngForm">
         <div class="user-details">
-            <div class="input-box">
-                <span class="details">Nome completo</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu nome completo" required class="form-control" matInput>
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Email</span>
-                <div class="espaco">
-                <input type="email" placeholder="Coloque seu email" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Telefone</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque seu numero de telefone Ex... (11)22224444" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Endereço do Evento</span>
-                <div class="espaco">
-                <input type="text" placeholder="Coloque o endereço do evento" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">CEP</span>
-                <div class="espaco">
-                <input type="text" placeholder="Informe o CEP do endereço" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Data do Evento</span>
-                <div class="espaco">
-                <input type="date" placeholder="Informe a cada do evento" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Número de pessoas</span>
-                <div class="espaco">
-                <input type="number" min="0" placeholder="Informe o número máximo de pessoas" required class="form-control">
-                </div>
-            </div>
-            <div class="input-box">
-                <span class="details">Classificação de Evento</span>
-                <div class="espaco">
-                <input type="text" placeholder="Classifique o evento" required class="form-control">
-                </div>
-            </div>
+            <mat-form-field appearance="fill">
+                <mat-label>Nome Completo</mat-label>
+                <input name="nome" ngModel #nomeInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="nomeInput.invalid">Nome inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input name="email" ngModel #emailInput="ngModel" type="email" required email class="form-control" matInput>
+                <mat-error *ngIf="emailInput.invalid">Email inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coloque seu numero de telefone Ex... (11)22224444</mat-label>
+                <input name="telefone" ngModel #telefoneInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="telefoneInput.invalid">Telefone inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Endereço do evento</mat-label>
+                <input name="endereco" ngModel #enderecoInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="enderecoInput.invalid">Endereço inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Informe o CEP do endereço</mat-label>
+                <input name="cep" ngModel #cepInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="cepInput.invalid">CEP inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Data do evento</mat-label>
+                <input name="data" ngModel #dataInput="ngModel" type="date" required class="form-control" matInput>
+                <mat-error *ngIf="dataInput.invalid">Data inválida</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Número máximo de pessoas</mat-label>
+                <input name="numero" ngModel #numeroInput="ngModel" type="number" min="0" required class="form-control" matInput>
+                <mat-error *ngIf="numeroInput.invalid">Número inválido</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Classificação do Evento</mat-label>
+                <input name="class" ngModel #classInput="ngModel" type="text" required class="form-control" matInput>
+                <mat-error *ngIf="classInput.invalid">Classificação inválida</mat-error>
+            </mat-form-field>
         </div>
         <div class="espaco">
             <button type="submit" class="btn btn-primary">Registrar</button>
