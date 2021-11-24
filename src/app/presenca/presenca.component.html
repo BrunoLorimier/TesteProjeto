@@ -4,21 +4,17 @@
 <mat-card class="titulo">
     Doação de sangue
     <!-- {{evento.nome}} -->
-    <!-- <input matInput type="text" name="nome" [ngModel] = "evento?.nome"> -->
 </mat-card>
 <div class="descricao">
-    A doação de sangue é um gesto solidário de doar uma pequena quantidade do próprio sangue para salvar a vida de pessoas que se submetem a tratamentos e intervenções médicas de grande porte e complexidade, como transfusões, transplantes, procedimentos oncológicos e cirurgias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem doloribus sed facere consequatur quidem laborum.
-    <!-- <p>Data Incial: {{evento.dt_inicio}}</p> 
-    <p>Data Final: {{evento.dt_final}}</p>
-    <p>Descrição: {{evento.desc}}</p>
-    <p>Zona: {{evento.zona}}</p>
-    <p>Tipo: {{evento.tipo}}</p>
-    <p>Tipo de Entidade: {{evento.tipoEntidade}}</p> -->
+    <!-- A doação de sangue é um gesto solidário de doar uma pequena quantidade do próprio sangue para salvar a vida de pessoas que se submetem a tratamentos e intervenções médicas de grande porte e complexidade, como transfusões, transplantes, procedimentos oncológicos e cirurgias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem doloribus sed facere consequatur quidem laborum. -->
+    <p>Data Incial: </p> 
+    <p>Data Final: </p>
+    <p>Descrição: </p>
 </div>
-<mat-card class="confirmado">Confirmados: 21 / 60</mat-card>
+<mat-card class="confirmado">Confirmados: {{minNumero}} / {{Numero}}</mat-card>
 <div class="botao">
-    <button mat-raised-button color="primary" class="btn-lg" [routerLink]="['/termos']">Confirmar presença</button>
+    <button mat-raised-button color="primary" class="btn-lg" (click)="confirmar(minNumero)">Confirmar presença</button>
     <!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
-    <button mat-raised-button class="btn-lg btn-danger left">Remover inscrição</button>
+    <button mat-raised-button class="btn-lg btn-danger left" (click)="remover(minNumero)">Remover inscrição</button>
     <!-- (click)="removerIns(evento.id)" -->
 </div>

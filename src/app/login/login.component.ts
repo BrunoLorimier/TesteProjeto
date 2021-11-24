@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
 
   onLogin(form: NgForm){
     if (form.invalid) return
-    this.router = "menu"
     this.usuarioService.login(form.value.email, form.value.senha)
   }
 

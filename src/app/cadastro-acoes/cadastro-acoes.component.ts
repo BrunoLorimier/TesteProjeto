@@ -12,6 +12,7 @@ export class CadastroAcoesComponent implements OnInit {
   cadastrar (form: NgForm){
     if (form.invalid) return
     this.eventoService.cadastrarEvento(form.value.nome, form.value.email, form.value.telefone, form.value.endereco, form.value.cep, form.value.data, form.value.numero, form.value.class)
+    form.resetForm()
   }
 
   constructor(private eventoService: EventoService) { }

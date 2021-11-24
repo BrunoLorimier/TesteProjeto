@@ -25,7 +25,7 @@ export class UsuarioService{
         }
         this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
             console.log(resposta)
-            // this.router.navigate(['/'])
+            this.router.navigate(['/'])
         })
     }
 
@@ -36,7 +36,7 @@ export class UsuarioService{
         }
         this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
             console.log(resposta)
-            // this.router.navigate(['/menu'])
+            this.router.navigate(['/menu'])
         })
     }
 

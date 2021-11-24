@@ -12,6 +12,7 @@ export class CadastroEventoComponent implements OnInit {
   onCadastro (form: NgForm){
     if (form.invalid) return
     this.eventoService.criarEvento(form.value.nome, form.value.datai, form.value.dataf, form.value.desc)
+    form.resetForm()
   }
 
   constructor(private eventoService: EventoService) { }

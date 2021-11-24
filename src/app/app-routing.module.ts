@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'novoacoes', component: CadastroAcoesComponent},
   {path: 'novoparceiro', component: CadastroParceiroComponent},
   {path:'evento/:idEvento', component: PresencaComponent},
-  {path: 'termos', component: TermosComponent},
+  // {path: 'termos', component: TermosComponent},
   {path: 'menu', component: MenuComponent, children: [
     {path: '', component: DashComponent}, 
   ]},

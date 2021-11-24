@@ -13,6 +13,7 @@ export class CadastroParceiroComponent implements OnInit {
     if (form.invalid) return
     this.parceiroService.enviarParceiro(form.value.nome, form.value.email, form.value.senha, form.value.end,
       form.value.telefone, form.value.zona, form.value.tipo)
+      form.resetForm()
   }
 
   constructor(private parceiroService: ParceiroService) { }

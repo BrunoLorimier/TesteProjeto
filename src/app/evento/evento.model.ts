@@ -4,13 +4,11 @@ export interface Evento {
     dt_inicio?: string
     dt_final?: string
     desc?: string
-    zona?: string
-    tipo?: string
-    tipoEntidade?: string
     email?: string
     telefone?: string
     endereco?: string
     cep?: string
     numero?: number
     classi?: string
+    minNumero?: number
 }

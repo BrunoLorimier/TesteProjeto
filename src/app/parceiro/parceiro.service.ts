@@ -25,7 +25,7 @@ export class ParceiroService{
         }
         this.httpClient.post('http://localhost:3000/', parceiro).subscribe(resposta => {
             console.log(resposta)
-            // this.router.navigate(['/menu'])
+            this.router.navigate(['/menu'])
         })
     }
 
