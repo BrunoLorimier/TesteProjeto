@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   onLogin(form: NgForm){
     if (form.invalid) return
     this.usuarioService.login(form.value.email, form.value.senha)
+    this.router = "menu"
   }
 
   constructor(private usuarioService: UsuarioService) { }

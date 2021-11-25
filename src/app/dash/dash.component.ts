@@ -19,13 +19,13 @@ export class DashComponent implements OnInit, OnDestroy{
   },
   {
     id: '2',
-    nome: 'Jaguariúna Rodeo Festival 2021',
-    desc: 'Jaguariúna Rodeo Festival 2021 in Jaguariúna. The concert will take place at Red Eventos in Jaguariúna. The festival starts the 26-11-2021 and it lasts untill the 04-12-2021'
+    nome: 'Doação de alimentos',
+    desc: 'Doar alimentos é se dedicar a uma causa que salva vidas, pois garante a sobrevivência de famílias necessitadas. Atualmente, em meio a uma pandemia, com muitos perdendo empregos e com dificuldades financeiras, a doação de alimentos é uma colaboração de fundamental importância.'
   },
   {
     id: '3',
-    nome: 'Formas de resolução de conflitos',
-    desc: "O conteúdo em questão faz parte da série para o ensino básico produzida pelo corpo docente do Programa Direito na escola A seguir estão 1 e-book e um vídeo animado completos sobre o tema Formas de resolução de conflitos. O objetivo da serie é desburocratizar a linguagem da ciência do Direito e democratizar a informação a todos os públicos."
+    nome: 'Doação de brinquedos',
+    desc: "O programa Helping kids, do Governo Federal, iniciou uma campanha para arrecadar brinquedos para crianças em situação de vulnerabilidade social atendidos por instituições de todo o País. A arrecadação será de carrinhos, bolas, bonecas, jogos educativos e pelúcia. O objetivo é presentear os pequenos no Natal."
   },
 ]
   private eventoSubscription: Subscription
