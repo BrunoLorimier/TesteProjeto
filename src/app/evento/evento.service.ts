@@ -20,9 +20,9 @@ export class EventoService{
             nome: nome,
             dt_inicio: dt_inicio,
             dt_final: dt_final,
-            desc: desc
+            descr: desc
         }
-        this.httpClient.post<{mensagem: string, id: string}>('http://localhost:3000/', evento).subscribe(resposta => {
+        this.httpClient.post<{mensagem: string, id: string}>('http://localhost:3000/novoevento', evento).subscribe(resposta => {
             evento.id = resposta.id
             console.log(resposta.mensagem)
             this.eventos.push(evento)
@@ -42,7 +42,7 @@ export class EventoService{
             numero: numero,
             classi: classi
         }
-        this.httpClient.post<{mensagem: string, id: string}>('http://localhost:3000/', evento).subscribe(resposta => {
+        this.httpClient.post<{mensagem: string, id: string}>('http://localhost:3000/novoacoes', evento).subscribe(resposta => {
             evento.id = resposta.id
             console.log(resposta.mensagem)
             this.eventos.push(evento)
@@ -58,7 +58,7 @@ export class EventoService{
 
     getEventos(): void {
         this.httpClient.get <{mensagem: string, eventos:
-        Evento[]}>('http://localhost:3000/')
+        Evento[]}>('http://localhost:3000/evento')
         .subscribe(
         (dados) => {
         this.eventos = dados.eventos;
@@ -67,21 +67,28 @@ export class EventoService{
     )
 }
 
-    getEvento(idEvento: string){
-        return this.httpClient.get<{id: string, nome: string, dt_inicio: string, dt_final: string, desc: string, numero: number, minNumero: number}>(`http://localhost:3000/`)
+    getEvento(idEvento: string): void{
+        this.httpClient.get<{mensagem: string, eventos:
+            Evento[]}>(`http://localhost:3000/${idEvento}`)
+        .subscribe(
+            (dados) => {
+            this.eventos = dados.eventos;
+            this.eventosAtualizados.next([...this.eventos]);
+            }
+        )
     }
     
 
     removerEvento(id: string): void {
-        this.httpClient.delete(`http://localhost:3000/`).subscribe(() => {
+        this.httpClient.delete(`http://localhost:3000/evento/${id}`).subscribe(() => {
             this.eventos = this.eventos.filter(cli => cli.id !== id)
             this.eventosAtualizados.next([...this.eventos])
         })
     }
 
-    atualizarNumero(id: string, nome: string, minNumero: number){
-        const evento: Evento = {id, nome, minNumero}
-        this.httpClient.put(`http://localhost:3000`, evento).subscribe(res => {
+    atualizarNumero(id: string, minNumero: number){
+        const evento: Evento = {id, minNumero}
+        this.httpClient.put(`http://localhost:3000/${id}`, evento).subscribe(res => {
             const copia = [...this.eventos]
             const indice = copia.findIndex(cli => {
                 cli.id === evento.id
@@ -96,18 +103,3 @@ export class EventoService{
 
 }
 
-
-//     .pipe(map((dados) => {
-    //         return dados.eventos.map((evento: { id: any; nome: any; dt_inicio: any; dt_final: any; desc: any; zona: any; tipo: any; tipoEntidade: any; }) => {
-    //             return{
-    //                 id: evento.id,
-    //                 nome: evento.nome,
-    //                 dt_inicio: evento.dt_inicio,
-    //                 dt_final: evento.dt_final,
-    //                 desc: evento.desc,
-    //                 zona: evento.zona,
-    //                 tipo: evento.tipo,
-    //                 tipoEntidade: evento.tipoEntidade
-    //             }
-    //         })
-    //     }))

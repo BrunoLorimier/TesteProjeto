@@ -39,14 +39,16 @@
                         <input name="telefone" ngModel #telefoneInput="ngModel" type="text" required class="form-control" matInput>
                         <mat-error *ngIf="telefoneInput.invalid">Telefone inválido</mat-error>
                     </mat-form-field>
-                    <select class="form-control col-md-12 formato cima" name="zona" >
-                        <label for="inputAddress">Zona</label>
+                    <p>Zona:</p>
+                    <select class="form-control col-md-12 formato cima" name="zona" ngModel>
+                        <label for="inputAddress" ngModel>Zona</label>
                         <option>Zona Sul</option>
                         <option>Zona Leste</option>
                         <option>Zona Norte</option>
                         <option>Zona Oeste</option>
                     </select>
-                    <select class="form-control col-md-12 formato"  name="tipo"   >
+                    <p>Tipo:</p>
+                    <select class="form-control col-md-12 formato"  name="tipo"  ngModel >
                         <label for="inputAddress">Tipo</label>
                         <option>Paróquia</option>
                         <option>ONG</option>

@@ -1,0 +1,60 @@
+CREATE DATABASE IF NOT EXISTS projeto;
+
+USE projeto;
+
+CREATE TABLE IF NOT EXISTS tb_evento (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    dt_inicio VARCHAR(200),
+    dt_final VARCHAR(200),
+    descr VARCHAR(1000),
+    email VARCHAR(200),
+    telefone VARCHAR(200),
+    endereco VARCHAR(200),
+    cep VARCHAR(200),
+    numero INT(50),
+    classi VARCHAR(200),
+    minNumero INT(50)
+);
+
+CREATE TABLE IF NOT EXISTS tb_usuario (
+	cpf VARCHAR(200) NOT NULL,
+    nome VARCHAR(200),
+    email VARCHAR(200) NOT NULL,
+    senha VARCHAR(200) NOT NULL,
+    endereco VARCHAR(200),
+    telefone VARCHAR(200),
+    dia VARCHAR(200),
+    PRIMARY KEY (cpf)
+);
+
+CREATE TABLE IF NOT EXISTS tb_parceiro (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200),
+    email VARCHAR(200),
+    senha VARCHAR(200),
+    endereco VARCHAR(200),
+    telefone VARCHAR(200),
+    zona VARCHAR(200),
+    tipo VARCHAR(200)
+);
+
+INSERT INTO tb_evento (nome, dt_inicio, dt_final, descr, email, telefone, endereco, cep, numero, classi, minNumero ) 
+VALUES ('Doação de Sangue', '01-12-2021', '31-12-2021', 'Venha ajudar doando sangue! A doação de sangue é um gesto 
+solidário de doar uma pequena quantidade do próprio sangue para salvar a vida de pessoas que se submetem a tratamentos e 
+intervenções médicas de grande porte e complexidade, como transfusões, transplantes, procedimentos oncológicos e cirurgias.', 'sangue@email.com',
+'(11)98372343', 'São Paulo', '0973234', '50', '10', '0');
+
+INSERT INTO tb_evento (nome, dt_inicio, dt_final, descr, email, telefone, endereco, cep, numero, classi, minNumero ) 
+VALUES ('Doação de alimentos', '15-12-2021', '31-01-2022', 'Doar alimentos é se dedicar a uma causa que salva vidas, 
+pois garante a sobrevivência de famílias necessitadas. Atualmente, em meio a uma pandemia, com muitos perdendo empregos 
+e com dificuldades financeiras, a doação de alimentos é uma colaboração de fundamental importância.', 'ali@email.com',
+'(21)83321834', 'Rio de Janeiro', '8973732', '75', '8', '0');
+
+INSERT INTO tb_evento (nome, dt_inicio, dt_final, descr, email, telefone, endereco, cep, numero, classi, minNumero ) 
+VALUES ('Doação de brinquedos', '17-12-2021', '01-01-2022', 'O programa Helping kids, do Governo Federal, iniciou uma 
+campanha para arrecadar brinquedos para crianças em situação de vulnerabilidade social atendidos por instituições de todo o País. 
+A arrecadação será de carrinhos, bolas, bonecas, jogos educativos e pelúcia.', 'land@email.com',
+'(31)9865433', 'Minas Gerais', '8463452', '100', '0', '0');
+
+INSERT INTO tb_usuario (cpf, nome, email, senha, endereco, telefone, dia) VALUES ('123456','admin','admin@email.com','admin', 'São Paulo', '987654321', '10/10/1999');

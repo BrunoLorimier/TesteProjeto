@@ -1,20 +1,23 @@
 <mat-toolbar color="primary">
     <span><a routerLink="/menu">Voltar</a></span>
 </mat-toolbar>
-<mat-card class="titulo">
-    {{nome}}
+<mat-card class="titulo" *ngFor="let evento of evento">
+    <!-- {{nome}} -->
     <!-- Doação de sangue -->
-    <!-- {{evento.nome}} -->
+    <mat-card-title>{{evento.nome}}</mat-card-title>
 </mat-card>
-<div class="descricao">
-    <!-- <p>Data Incial: </p> 
-    <p>Data Final: </p> -->
-    <p>Descrição: {{desc}}</p>
+<div class="descricao" *ngFor="let evento of evento">
+    <p>Data Incial: {{evento.dt_inicio}}</p> 
+    <p>Data Final: {{evento.dt_final}}</p>
+    <p>Descrição: {{evento.descr}}</p>
+    <p>Endereço: {{evento.endereco}}</p>
+    <p>CEP: {{evento.cep}}</p>
+    <p>Telefone: {{evento.telefone}}</p>
 </div>
-<mat-card class="confirmado">Confirmados: {{minNumero}} / {{Numero}}</mat-card>
-<div class="botao">
-    <button mat-raised-button color="primary" class="btn-lg" (click)="confirmar(minNumero)">Confirmar presença</button>
+<mat-card class="confirmado" *ngFor="let evento of evento">Confirmados: {{evento.minNumero}} / {{evento.numero}}</mat-card>
+<div class="botao" *ngFor="let evento of evento">
+    <button mat-raised-button color="primary" class="btn-lg" (click)="confirmar(evento.minNumero, evento.numero)">Confirmar presença</button>
     <!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
-    <button mat-raised-button class="btn-lg btn-danger left" (click)="remover(minNumero)">Remover inscrição</button>
+    <button mat-raised-button class="btn-lg btn-danger left" (click)="remover(evento.minNumero, evento.numero)">Remover inscrição</button>
     <!-- (click)="removerIns(evento.id)" -->
 </div>

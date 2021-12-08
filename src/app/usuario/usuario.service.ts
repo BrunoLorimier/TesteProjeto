@@ -23,7 +23,7 @@ export class UsuarioService{
             telefone: telefone,
             data: data
         }
-        this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
+        this.httpClient.post('http://localhost:3000/signup', usuario).subscribe(resposta => {
             console.log(resposta)
             this.router.navigate(['/'])
         })
@@ -34,7 +34,7 @@ export class UsuarioService{
             email: email,
             senha: senha
         }
-        this.httpClient.post('http://localhost:3000/', usuario).subscribe(resposta => {
+        this.httpClient.post('http://localhost:3000/login', usuario).subscribe(resposta => {
             console.log(resposta)
             this.router.navigate(['/menu'])
         })

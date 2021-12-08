@@ -1,9 +1,9 @@
 export interface Evento {
     id?: string
-    nome: string
+    nome?: string
     dt_inicio?: string
     dt_final?: string
-    desc?: string
+    descr?: string
     email?: string
     telefone?: string
     endereco?: string
